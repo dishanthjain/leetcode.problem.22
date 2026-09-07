@@ -1,0 +1,27 @@
+Code:
+
+class Solution {
+public:
+    void generate(string current, int open, int close, int n, vector<string>& result) {
+        if (current.size() == 2 * n) {
+            result.push_back(current);
+            return;
+        }
+
+        if (open < n)
+            generate(current + "(", open + 1, close, n, result);
+
+        if (close < open)
+            generate(current + ")", open, close + 1, n, result);
+    }
+
+    vector<string> generateParenthesis(int n) {
+        vector<string> result;
+        generate("", 0, 0, n, result);
+        return result;
+    }
+};
+
+Explaination:
+
+The code uses backtracking to add ( or ) while keeping the parentheses valid. It only adds ) when there are more opening brackets available, ensuring every generated combination is well-formed.
