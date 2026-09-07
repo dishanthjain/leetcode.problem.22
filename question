@@ -1,0 +1,18 @@
+LeetCode #22 — Generate Parentheses
+
+Difficulty: Medium
+Language: C++
+
+Problem:
+Given n pairs of parentheses, generate all possible combinations of well-formed parentheses.
+
+Examples:
+
+Input:  n = 3
+Output: ["((()))","(()())","(())()","()(())","()()()"]
+Input:  n = 1
+Output: ["()"]
+
+Constraints:
+
+1 <= n <= 8
